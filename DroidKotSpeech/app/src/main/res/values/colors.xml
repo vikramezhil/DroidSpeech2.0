@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#543359</color>
+    <color name="colorPrimaryDark">#543359</color>
+    <color name="colorAccent">#E91E63</color>
+
+    <array name="progressBallColors">
+        <item>@android:color/holo_green_light</item>
+        <item>@android:color/holo_blue_light</item>
+        <item>@android:color/holo_purple</item>
+        <item>@android:color/holo_orange_light</item>
+        <item>@android:color/holo_red_light</item>
+    </array>
+</resources>

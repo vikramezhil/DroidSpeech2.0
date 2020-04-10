@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="bounce_ball_content_desc">progress</string>
+    <string name="confirm">Confirm</string>
+    <string name="retry">Retry</string>
+    <string name="cancel">Cancel</string>
+</resources>

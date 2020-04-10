@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">DroidKotSpeechExample</string>
+
+    <string name="progress_msg_listening">Listening…</string>
+</resources>

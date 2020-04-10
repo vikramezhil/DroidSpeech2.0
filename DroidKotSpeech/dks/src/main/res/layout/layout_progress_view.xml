@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/transparent">
+
+    <View
+        android:id="@+id/viewBg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"/>
+
+    <LinearLayout
+        android:id="@+id/ll_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_progress_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/bounce_ball_content_desc"
+            android:textColor="@android:color/black"/>
+
+        <LinearLayout
+            android:id="@+id/ll_progress_balls"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/iv_ball_height"
+            android:layout_marginTop="@dimen/view_margin"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_progress_ball1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_bounce_ball"
+                android:contentDescription="@string/bounce_ball_content_desc"
+                android:scaleType="centerInside"/>
+
+            <ImageView
+                android:id="@+id/iv_progress_ball2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_bounce_ball"
+                android:contentDescription="@string/bounce_ball_content_desc"
+                android:scaleType="centerInside"/>
+
+            <ImageView
+                android:id="@+id/iv_progress_ball3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_bounce_ball"
+                android:contentDescription="@string/bounce_ball_content_desc"
+                android:scaleType="centerInside"/>
+
+            <ImageView
+                android:id="@+id/iv_progress_ball4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_bounce_ball"
+                android:contentDescription="@string/bounce_ball_content_desc"
+                android:scaleType="centerInside"/>
+
+            <ImageView
+                android:id="@+id/iv_progress_ball5"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_bounce_ball"
+                android:contentDescription="@string/bounce_ball_content_desc"
+                android:scaleType="centerInside"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_action_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/view_margin"
+            android:gravity="center">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_positive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/view_margin"
+                android:layout_marginStart="@dimen/view_margin"
+                android:text="@string/confirm"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_neutral"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/view_margin"
+                android:layout_marginStart="@dimen/view_margin"
+                android:text="@string/retry"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_negative"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/view_margin"
+                android:layout_marginStart="@dimen/view_margin"
+                android:text="@string/cancel"/>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

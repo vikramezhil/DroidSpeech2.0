@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ProgressView">
+        <attr name="pvBackgroundColor" format="color"/>
+        <attr name="pvBackgroundAlpha" format="float"/>
+
+        <attr name="pvMessage" format="string"/>
+        <attr name="pvMessageColor" format="color"/>
+        <attr name="pvMessageTextSize" format="float"/>
+
+        <attr name="pvPositiveButtonText" format="string"/>
+        <attr name="pvPositiveButtonBackgroundColor" format="color"/>
+        <attr name="pvPositiveButtonTextColor" format="color"/>
+        <attr name="pvPositiveButtonWidth" format="integer"/>
+        <attr name="pvPositiveButtonHeight" format="integer"/>
+        <attr name="pvPositiveButtonCornerRadius" format="integer"/>
+        <attr name="pvPositiveButtonBackgroundAlpha" format="float"/>
+        <attr name="pvPositiveButtonTextSize" format="float"/>
+        <attr name="pvPositiveButtonTextCaps" format="boolean"/>
+
+        <attr name="pvNeutralButtonText" format="string"/>
+        <attr name="pvNeutralButtonBackgroundColor" format="color"/>
+        <attr name="pvNeutralButtonTextColor" format="color"/>
+        <attr name="pvNeutralButtonWidth" format="integer"/>
+        <attr name="pvNeutralButtonHeight" format="integer"/>
+        <attr name="pvNeutralButtonCornerRadius" format="integer"/>
+        <attr name="pvNeutralButtonBackgroundAlpha" format="float"/>
+        <attr name="pvNeutralButtonTextSize" format="float"/>
+        <attr name="pvNeutralButtonTextCaps" format="boolean"/>
+
+        <attr name="pvNegativeButtonText" format="string"/>
+        <attr name="pvNegativeButtonBackgroundColor" format="color"/>
+        <attr name="pvNegativeButtonTextColor" format="color"/>
+        <attr name="pvNegativeButtonWidth" format="integer"/>
+        <attr name="pvNegativeButtonHeight" format="integer"/>
+        <attr name="pvNegativeButtonCornerRadius" format="integer"/>
+        <attr name="pvNegativeButtonBackgroundAlpha" format="float"/>
+        <attr name="pvNegativeButtonTextSize" format="float"/>
+        <attr name="pvNegativeButtonTextCaps" format="boolean"/>
+
+        <attr name="pvBallColors" format="reference" />
+    </declare-styleable>
+</resources>

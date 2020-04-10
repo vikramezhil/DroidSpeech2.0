@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <github.com.vikramezhil.dks.view.progress.ProgressView
+        android:id="@+id/pv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:pvBackgroundColor="@android:color/black"
+        app:pvBackgroundAlpha="0.8"
+        app:pvMessageColor="@android:color/white"
+        app:pvMessage="@string/progress_msg_listening"
+        app:pvPositiveButtonBackgroundColor="@color/colorPrimary"
+        app:pvPositiveButtonTextColor="@android:color/white"
+        app:pvPositiveButtonCornerRadius="20"
+        app:pvPositiveButtonHeight="150"
+        app:pvNeutralButtonBackgroundColor="@color/colorPrimary"
+        app:pvNeutralButtonTextColor="@android:color/white"
+        app:pvNeutralButtonCornerRadius="20"
+        app:pvNeutralButtonHeight="150"
+        app:pvNegativeButtonBackgroundColor="@color/colorPrimary"
+        app:pvNegativeButtonTextColor="@android:color/white"
+        app:pvNegativeButtonCornerRadius="20"
+        app:pvNegativeButtonHeight="150"
+        app:pvBallColors="@array/progressBallColors"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
