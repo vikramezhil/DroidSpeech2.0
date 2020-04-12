@@ -1,7 +1,8 @@
 # DroidSpeech2.0
 Android kotlin library for continuous speech recognition with localisations.
 
-<b>Supports from Android SDK version 16 and above</b>.
+<b>Supports from Android SDK version 16 and above.</b><br/><br/>
+<b>Requires androidx.</b>
 
 <b><h1>About</h1></b>
 
