@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="ProgressView">
+    <declare-styleable name="DksProgressView">
         <attr name="pvBackgroundColor" format="color"/>
         <attr name="pvBackgroundAlpha" format="float"/>
 
@@ -38,6 +38,6 @@
         <attr name="pvNegativeButtonTextSize" format="float"/>
         <attr name="pvNegativeButtonTextCaps" format="boolean"/>
 
-        <attr name="pvBallColors" format="reference" />
+        <attr name="pvBallColors" format="reference"/>
     </declare-styleable>
 </resources>

@@ -1,11 +1,18 @@
-package github.com.vikramezhil.dks.view.utils.animation
+package github.com.vikramezhil.dks.view.animation
 
 /**
- * Animation Engine Methods
+ * Animation Engine abstract
  * @author vikramezhil
  */
 
 abstract class AnimationEngine {
+
+    protected val idleFrequency = 3f
+    protected val minFrequencies = arrayOf(8f, 16f, 24f, 16f, 8f)
+    protected val outOfBoundsMinFrequency = 0f
+    protected val animDurationInMilliSecs = 500L
+
+    protected abstract var animationRunning: Boolean
 
     /**
      * Starts the animation

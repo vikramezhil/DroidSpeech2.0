@@ -23,6 +23,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:layout_marginLeft="@dimen/view_margin"
+            android:layout_marginStart="@dimen/view_margin"
+            android:layout_marginRight="@dimen/view_margin"
+            android:layout_marginEnd="@dimen/view_margin"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/bounce_ball_content_desc"
             android:textColor="@android:color/black"/>
@@ -30,7 +34,7 @@
         <LinearLayout
             android:id="@+id/ll_progress_balls"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/iv_ball_height"
+            android:layout_height="@dimen/ll_ball_height"
             android:layout_marginTop="@dimen/view_margin"
             android:orientation="horizontal"
             android:gravity="center">
@@ -38,7 +42,7 @@
             <ImageView
                 android:id="@+id/iv_progress_ball1"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:src="@drawable/ic_bounce_ball"
                 android:contentDescription="@string/bounce_ball_content_desc"
                 android:scaleType="centerInside"/>
@@ -46,7 +50,7 @@
             <ImageView
                 android:id="@+id/iv_progress_ball2"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:src="@drawable/ic_bounce_ball"
                 android:contentDescription="@string/bounce_ball_content_desc"
                 android:scaleType="centerInside"/>
@@ -54,7 +58,7 @@
             <ImageView
                 android:id="@+id/iv_progress_ball3"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:src="@drawable/ic_bounce_ball"
                 android:contentDescription="@string/bounce_ball_content_desc"
                 android:scaleType="centerInside"/>
@@ -62,7 +66,7 @@
             <ImageView
                 android:id="@+id/iv_progress_ball4"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:src="@drawable/ic_bounce_ball"
                 android:contentDescription="@string/bounce_ball_content_desc"
                 android:scaleType="centerInside"/>
@@ -70,7 +74,7 @@
             <ImageView
                 android:id="@+id/iv_progress_ball5"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:src="@drawable/ic_bounce_ball"
                 android:contentDescription="@string/bounce_ball_content_desc"
                 android:scaleType="centerInside"/>
@@ -90,7 +94,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/view_margin"
                 android:layout_marginStart="@dimen/view_margin"
-                android:text="@string/confirm"/>
+                android:text="@string/positive"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_neutral"
@@ -98,7 +102,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/view_margin"
                 android:layout_marginStart="@dimen/view_margin"
-                android:text="@string/retry"/>
+                android:text="@string/neutral"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_negative"
@@ -106,7 +110,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/view_margin"
                 android:layout_marginStart="@dimen/view_margin"
-                android:text="@string/cancel"/>
+                android:text="@string/negative"/>
         </LinearLayout>
     </LinearLayout>
 </FrameLayout>

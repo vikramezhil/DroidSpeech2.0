@@ -2,4 +2,9 @@
     <string name="app_name">DroidKotSpeechExample</string>
 
     <string name="progress_msg_listening">Listening…</string>
+    <string name="confirm">Confirm</string>
+    <string name="retry">Retry</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="start">Start DKS</string>
 </resources>

@@ -4,28 +4,28 @@ import android.content.Context
 import android.graphics.Color
 import android.util.AttributeSet
 import android.view.View
+import android.widget.FrameLayout
 import android.widget.ImageView
-import android.widget.LinearLayout
 import androidx.core.view.forEachIndexed
 import github.com.vikramezhil.dks.R
-import github.com.vikramezhil.dks.view.utils.animation.bounce.BounceAnimationDriver
+import github.com.vikramezhil.dks.view.animation.bounce.BounceAnimationDriver
 import kotlinx.android.synthetic.main.layout_progress_view.view.*
 import java.lang.Exception
 
 /**
- * Progress View
+ * Dks Progress View
  * @author vikramezhil
  */
 
-class ProgressView(context: Context, attrs: AttributeSet): LinearLayout(context, attrs) {
+class DksProgressView @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0): FrameLayout(context) {
 
-    private var progressViewListener: ProgressViewListener? = null
+    private var dksProgressViewListener: DksProgressViewListener? = null
     private var animationDriver: BounceAnimationDriver
 
     init {
         View.inflate(context, R.layout.layout_progress_view, this)
 
-        animationDriver = BounceAnimationDriver(ll_progress_balls)
+        animationDriver = BounceAnimationDriver(context, ll_progress_balls)
 
         init(context, attrs)
     }
@@ -35,85 +35,87 @@ class ProgressView(context: Context, attrs: AttributeSet): LinearLayout(context,
      * @param context Context The view context
      * @param attrs AttributeSet The view attributes
      */
-    private fun init(context: Context, attrs: AttributeSet) {
-        val typedArray = context.theme.obtainStyledAttributes(attrs, R.styleable.ProgressView, 0, 0)
+    private fun init(context: Context, attrs: AttributeSet?) {
+        if (attrs == null) return
+
+        val typedArray = context.theme.obtainStyledAttributes(attrs, R.styleable.DksProgressView, 0, 0)
 
         try {
             // Background
-            val pvBackgroundColor = typedArray.getInt(R.styleable.ProgressView_pvBackgroundColor, Color.WHITE)
-            val pvBackgroundAlpha = typedArray.getFloat(R.styleable.ProgressView_pvBackgroundAlpha, 1f)
+            val pvBackgroundColor = typedArray.getInt(R.styleable.DksProgressView_pvBackgroundColor, Color.WHITE)
+            val pvBackgroundAlpha = typedArray.getFloat(R.styleable.DksProgressView_pvBackgroundAlpha, 1f)
             setBackground(pvBackgroundColor, pvBackgroundAlpha)
 
             // Ball
-            val pvBallColors = typedArray.getResourceId(R.styleable.ProgressView_pvBallColors, 0)
+            val pvBallColors = typedArray.getResourceId(R.styleable.DksProgressView_pvBallColors, 0)
             setProgressBallColors(typedArray.resources.getIntArray(pvBallColors).toCollection(ArrayList()))
 
             // Message
-            var pvMessage = typedArray.getString(R.styleable.ProgressView_pvMessage)
+            var pvMessage = typedArray.getString(R.styleable.DksProgressView_pvMessage)
             if (pvMessage.isNullOrEmpty()) pvMessage = resources.getString(R.string.bounce_ball_content_desc)
             setProgressMessage(pvMessage)
 
-            val pvMessageColor = typedArray.getInt(R.styleable.ProgressView_pvMessageColor, Color.BLACK)
+            val pvMessageColor = typedArray.getInt(R.styleable.DksProgressView_pvMessageColor, Color.BLACK)
             setProgressMessageColor(pvMessageColor)
 
-            val pvMessageTextSize = typedArray.getFloat(R.styleable.ProgressView_pvMessageTextSize, 0f)
+            val pvMessageTextSize = typedArray.getFloat(R.styleable.DksProgressView_pvMessageTextSize, 0f)
             setProgressMessageTextSize(pvMessageTextSize)
 
             // Positive Button
-            var pvPositiveButtonText = typedArray.getString(R.styleable.ProgressView_pvPositiveButtonText)
-            if (pvPositiveButtonText.isNullOrEmpty()) pvPositiveButtonText = resources.getString(R.string.confirm)
+            var pvPositiveButtonText = typedArray.getString(R.styleable.DksProgressView_pvPositiveButtonText)
+            if (pvPositiveButtonText.isNullOrEmpty()) pvPositiveButtonText = resources.getString(R.string.positive)
             setPositiveButtonText(pvPositiveButtonText)
 
-            val pvPositiveButtonWidth = typedArray.getInt(R.styleable.ProgressView_pvPositiveButtonWidth, 0)
-            val pvPositiveButtonHeight = typedArray.getInt(R.styleable.ProgressView_pvPositiveButtonHeight, 0)
+            val pvPositiveButtonWidth = typedArray.getInt(R.styleable.DksProgressView_pvPositiveButtonWidth, 0)
+            val pvPositiveButtonHeight = typedArray.getInt(R.styleable.DksProgressView_pvPositiveButtonHeight, 0)
             setPositiveButtonDimensions(pvPositiveButtonWidth, pvPositiveButtonHeight)
 
-            val pvPositiveButtonTextSize = typedArray.getFloat(R.styleable.ProgressView_pvPositiveButtonTextSize, 0f)
+            val pvPositiveButtonTextSize = typedArray.getFloat(R.styleable.DksProgressView_pvPositiveButtonTextSize, 0f)
             setPositiveButtonTextSize(pvPositiveButtonTextSize)
 
-            val pvPositiveButtonBackgroundColor = typedArray.getInt(R.styleable.ProgressView_pvPositiveButtonBackgroundColor, Color.GRAY)
-            val pvPositiveButtonTextColor = typedArray.getInt(R.styleable.ProgressView_pvPositiveButtonTextColor, Color.BLACK)
-            val pvPositiveButtonCornerRadius = typedArray.getInt(R.styleable.ProgressView_pvPositiveButtonCornerRadius, 1)
-            val pvPositiveButtonBackgroundAlpha = typedArray.getFloat(R.styleable.ProgressView_pvPositiveButtonBackgroundAlpha, 1f)
-            val pvPositiveButtonTextCaps = typedArray.getBoolean(R.styleable.ProgressView_pvPositiveButtonTextCaps, false)
+            val pvPositiveButtonBackgroundColor = typedArray.getInt(R.styleable.DksProgressView_pvPositiveButtonBackgroundColor, Color.GRAY)
+            val pvPositiveButtonTextColor = typedArray.getInt(R.styleable.DksProgressView_pvPositiveButtonTextColor, Color.BLACK)
+            val pvPositiveButtonCornerRadius = typedArray.getInt(R.styleable.DksProgressView_pvPositiveButtonCornerRadius, 1)
+            val pvPositiveButtonBackgroundAlpha = typedArray.getFloat(R.styleable.DksProgressView_pvPositiveButtonBackgroundAlpha, 1f)
+            val pvPositiveButtonTextCaps = typedArray.getBoolean(R.styleable.DksProgressView_pvPositiveButtonTextCaps, false)
             setPositiveButtonProperties(pvPositiveButtonBackgroundColor, pvPositiveButtonTextColor, pvPositiveButtonCornerRadius, pvPositiveButtonBackgroundAlpha, pvPositiveButtonTextCaps)
 
             // Neutral Button
-            var pvNeutralButtonText = typedArray.getString(R.styleable.ProgressView_pvNeutralButtonText)
-            if (pvNeutralButtonText.isNullOrEmpty()) pvNeutralButtonText = resources.getString(R.string.retry)
+            var pvNeutralButtonText = typedArray.getString(R.styleable.DksProgressView_pvNeutralButtonText)
+            if (pvNeutralButtonText.isNullOrEmpty()) pvNeutralButtonText = resources.getString(R.string.neutral)
             setNeutralButtonText(pvNeutralButtonText)
 
-            val pvNeutralButtonWidth = typedArray.getInt(R.styleable.ProgressView_pvNeutralButtonWidth, 0)
-            val pvNeutralButtonHeight = typedArray.getInt(R.styleable.ProgressView_pvNeutralButtonHeight, 0)
+            val pvNeutralButtonWidth = typedArray.getInt(R.styleable.DksProgressView_pvNeutralButtonWidth, 0)
+            val pvNeutralButtonHeight = typedArray.getInt(R.styleable.DksProgressView_pvNeutralButtonHeight, 0)
             setNeutralButtonDimensions(pvNeutralButtonWidth, pvNeutralButtonHeight)
 
-            val pvNeutralButtonTextSize = typedArray.getFloat(R.styleable.ProgressView_pvNeutralButtonTextSize, 0f)
+            val pvNeutralButtonTextSize = typedArray.getFloat(R.styleable.DksProgressView_pvNeutralButtonTextSize, 0f)
             setNeutralButtonTextSize(pvNeutralButtonTextSize)
 
-            val pvNeutralButtonBackgroundColor = typedArray.getInt(R.styleable.ProgressView_pvNeutralButtonBackgroundColor, Color.GRAY)
-            val pvNeutralButtonTextColor = typedArray.getInt(R.styleable.ProgressView_pvNeutralButtonTextColor, Color.BLACK)
-            val pvNeutralButtonCornerRadius = typedArray.getInt(R.styleable.ProgressView_pvNeutralButtonCornerRadius, 1)
-            val pvNeutralButtonBackgroundAlpha = typedArray.getFloat(R.styleable.ProgressView_pvNeutralButtonBackgroundAlpha, 1f)
-            val pvNeutralButtonTextCaps = typedArray.getBoolean(R.styleable.ProgressView_pvNeutralButtonTextCaps, false)
+            val pvNeutralButtonBackgroundColor = typedArray.getInt(R.styleable.DksProgressView_pvNeutralButtonBackgroundColor, Color.GRAY)
+            val pvNeutralButtonTextColor = typedArray.getInt(R.styleable.DksProgressView_pvNeutralButtonTextColor, Color.BLACK)
+            val pvNeutralButtonCornerRadius = typedArray.getInt(R.styleable.DksProgressView_pvNeutralButtonCornerRadius, 1)
+            val pvNeutralButtonBackgroundAlpha = typedArray.getFloat(R.styleable.DksProgressView_pvNeutralButtonBackgroundAlpha, 1f)
+            val pvNeutralButtonTextCaps = typedArray.getBoolean(R.styleable.DksProgressView_pvNeutralButtonTextCaps, false)
             setNeutralButtonProperties(pvNeutralButtonBackgroundColor, pvNeutralButtonTextColor, pvNeutralButtonCornerRadius, pvNeutralButtonBackgroundAlpha, pvNeutralButtonTextCaps)
 
             // Negative Button
-            var pvNegativeButtonText = typedArray.getString(R.styleable.ProgressView_pvNegativeButtonText)
-            if (pvNegativeButtonText.isNullOrEmpty()) pvNegativeButtonText = resources.getString(R.string.cancel)
+            var pvNegativeButtonText = typedArray.getString(R.styleable.DksProgressView_pvNegativeButtonText)
+            if (pvNegativeButtonText.isNullOrEmpty()) pvNegativeButtonText = resources.getString(R.string.negative)
             setNegativeButtonText(pvNegativeButtonText)
 
-            val pvNegativeButtonWidth = typedArray.getInt(R.styleable.ProgressView_pvNegativeButtonWidth, 0)
-            val pvNegativeButtonHeight = typedArray.getInt(R.styleable.ProgressView_pvNegativeButtonHeight, 0)
+            val pvNegativeButtonWidth = typedArray.getInt(R.styleable.DksProgressView_pvNegativeButtonWidth, 0)
+            val pvNegativeButtonHeight = typedArray.getInt(R.styleable.DksProgressView_pvNegativeButtonHeight, 0)
             setNegativeButtonDimensions(pvNegativeButtonWidth, pvNegativeButtonHeight)
 
-            val pvNegativeButtonTextSize = typedArray.getFloat(R.styleable.ProgressView_pvNegativeButtonTextSize, 0f)
+            val pvNegativeButtonTextSize = typedArray.getFloat(R.styleable.DksProgressView_pvNegativeButtonTextSize, 0f)
             setNegativeButtonTextSize(pvNegativeButtonTextSize)
 
-            val pvNegativeButtonBackgroundColor = typedArray.getInt(R.styleable.ProgressView_pvNegativeButtonBackgroundColor, Color.GRAY)
-            val pvNegativeButtonTextColor = typedArray.getInt(R.styleable.ProgressView_pvNegativeButtonTextColor, Color.BLACK)
-            val pvNegativeButtonCornerRadius = typedArray.getInt(R.styleable.ProgressView_pvNegativeButtonCornerRadius, 1)
-            val pvNegativeButtonBackgroundAlpha = typedArray.getFloat(R.styleable.ProgressView_pvNegativeButtonBackgroundAlpha, 1f)
-            val pvNegativeButtonTextCaps = typedArray.getBoolean(R.styleable.ProgressView_pvNegativeButtonTextCaps, false)
+            val pvNegativeButtonBackgroundColor = typedArray.getInt(R.styleable.DksProgressView_pvNegativeButtonBackgroundColor, Color.GRAY)
+            val pvNegativeButtonTextColor = typedArray.getInt(R.styleable.DksProgressView_pvNegativeButtonTextColor, Color.BLACK)
+            val pvNegativeButtonCornerRadius = typedArray.getInt(R.styleable.DksProgressView_pvNegativeButtonCornerRadius, 1)
+            val pvNegativeButtonBackgroundAlpha = typedArray.getFloat(R.styleable.DksProgressView_pvNegativeButtonBackgroundAlpha, 1f)
+            val pvNegativeButtonTextCaps = typedArray.getBoolean(R.styleable.DksProgressView_pvNegativeButtonTextCaps, false)
             setNegativeButtonProperties(pvNegativeButtonBackgroundColor, pvNegativeButtonTextColor, pvNegativeButtonCornerRadius, pvNegativeButtonBackgroundAlpha, pvNegativeButtonTextCaps)
         } catch (e: Exception) {
             e.printStackTrace()
@@ -126,15 +128,15 @@ class ProgressView(context: Context, attrs: AttributeSet): LinearLayout(context,
 
     /**
      * Sets the progress view listener instance
-     * @param progressViewListener ProgressViewListener The class instance which implements the listener
+     * @param dksProgressViewListener ProgressViewListener The class instance which implements the listener
      * @override onClickedPositive, onClickedNeutral, onClickedNegative
      */
-    fun setProgressViewListener(progressViewListener: ProgressViewListener) {
-        this.progressViewListener = progressViewListener
+    fun setProgressViewListener(dksProgressViewListener: DksProgressViewListener) {
+        this.dksProgressViewListener = dksProgressViewListener
 
-        btn_positive.setOnClickListener { this.progressViewListener?.onClickedPositive(tv_progress_message.text.toString()) }
-        btn_neutral.setOnClickListener { this.progressViewListener?.onClickedNeutral() }
-        btn_negative.setOnClickListener { this.progressViewListener?.onClickedNegative() }
+        btn_positive.setOnClickListener { this.dksProgressViewListener?.onClickedPositive() }
+        btn_neutral.setOnClickListener { this.dksProgressViewListener?.onClickedNeutral() }
+        btn_negative.setOnClickListener { this.dksProgressViewListener?.onClickedNegative() }
     }
 
     // Progress View Background
