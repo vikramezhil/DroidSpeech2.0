@@ -1,0 +1,13 @@
+$dokka.format:html
+$dokka.linkExtension:html
+$dokka.location:github.com.vikramezhil.dks.utils$isNetworkAvailable(android.content.Context)github.com.vikramezhil.dks.utils/android.content.-context/is-network-available.html
+$dokka.location:github.com.vikramezhil.dks.utils$parseSpeechResult(android.os.Bundle)github.com.vikramezhil.dks.utils/android.os.-bundle/parse-speech-result.html
+$dokka.location:github.com.vikramezhil.dks.utils$pxToDp(kotlin.Int, android.content.Context)github.com.vikramezhil.dks.utils/kotlin.-int/px-to-dp.html
+$dokka.location:github.com.vikramezhil.dks.utils$randomInt(kotlin.random.Random, kotlin.Int, kotlin.Int)github.com.vikramezhil.dks.utils/kotlin.random.-random/random-int.html
+github.com.vikramezhil.dks.language
+github.com.vikramezhil.dks.speech
+github.com.vikramezhil.dks.utils
+github.com.vikramezhil.dks.view.alert
+github.com.vikramezhil.dks.view.animation
+github.com.vikramezhil.dks.view.animation.bounce
+github.com.vikramezhil.dks.view.progress

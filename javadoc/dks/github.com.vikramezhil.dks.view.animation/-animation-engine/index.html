@@ -1,0 +1,119 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>AnimationEngine - dks</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">dks</a>&nbsp;/&nbsp;<a href="../index.html">github.com.vikramezhil.dks.view.animation</a>&nbsp;/&nbsp;<a href="./index.html">AnimationEngine</a><br/>
+<br/>
+<h1>AnimationEngine</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">AnimationEngine</span></code>
+<p>Animation Engine abstract</p>
+<p><strong>Author</strong><br/>
+vikramezhil</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Animation Engine abstract</p>
+<code><span class="identifier">AnimationEngine</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="animation-running.html">animationRunning</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">var </span><span class="identifier">animationRunning</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="anim-duration-in-milli-secs.html">animDurationInMilliSecs</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">animDurationInMilliSecs</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="idle-frequency.html">idleFrequency</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">idleFrequency</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html"><span class="identifier">Float</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="min-frequencies.html">minFrequencies</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">minFrequencies</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html"><span class="identifier">Array</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html"><span class="identifier">Float</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="out-of-bounds-min-frequency.html">outOfBoundsMinFrequency</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">outOfBoundsMinFrequency</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html"><span class="identifier">Float</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="animate.html">animate</a></h4>
+</td>
+<td>
+<p>Starts animating the view</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">animate</span><span class="symbol">(</span><span class="identifier" id="github.com.vikramezhil.dks.view.animation.AnimationEngine$animate(kotlin.Float)/frequency">frequency</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html"><span class="identifier">Float</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="idle.html">idle</a></h4>
+</td>
+<td>
+<p>Starts idle mode for the view</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">idle</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="start.html">start</a></h4>
+</td>
+<td>
+<p>Starts the animation</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">start</span><span class="symbol">(</span><span class="identifier" id="github.com.vikramezhil.dks.view.animation.AnimationEngine$start(kotlin.Float)/frequency">frequency</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html"><span class="identifier">Float</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="stop.html">stop</a></h4>
+</td>
+<td>
+<p>Stops the animation</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">stop</span><span class="symbol">(</span><span class="identifier" id="github.com.vikramezhil.dks.view.animation.AnimationEngine$stop(kotlin.Boolean)/switchToIdle">switchToIdle</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../../github.com.vikramezhil.dks.view.animation.bounce/-bounce-animation-driver/index.html">BounceAnimationDriver</a></h4>
+</td>
+<td>
+<p>Bounce Animation Driver</p>
+<code><span class="keyword">class </span><span class="identifier">BounceAnimationDriver</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">AnimationEngine</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>
