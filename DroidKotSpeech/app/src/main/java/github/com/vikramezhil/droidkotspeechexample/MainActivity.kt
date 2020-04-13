@@ -37,9 +37,9 @@ class MainActivity : AppCompatActivity() {
                 Log.d(application.packageName, "defaultLanguage - $defaultLanguage")
                 Log.d(application.packageName, "supportedLanguages - $supportedLanguages")
 
-                if (supportedLanguages != null && supportedLanguages.contains("ta-IN")) {
-                    // Setting the speech recognition language to tamil if found
-                    dks.currentSpeechLanguage = "ta-IN"
+                if (supportedLanguages != null && supportedLanguages.contains("en-IN")) {
+                    // Setting the speech recognition language to english india if found
+                    dks.currentSpeechLanguage = "en-IN"
                 }
             }
 
@@ -48,7 +48,6 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
-        dks.continuousSpeechRecognition = true
         dks.oneStepResultVerify = true
         dks.injectProgressView(R.layout.layout_pv_inject)
 

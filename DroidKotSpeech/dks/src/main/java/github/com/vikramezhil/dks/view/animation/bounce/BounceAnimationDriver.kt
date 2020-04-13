@@ -53,7 +53,6 @@ class BounceAnimationDriver(private val context: Context, private val viewGroup:
                 }
             }
 
-            view.clearAnimation()
             val animation = ObjectAnimator.ofFloat(view, "translationY", -(bounceTransitionAnimation), 0f)
             animation.duration = animDurationInMilliSecs
             animation.start()
@@ -80,7 +79,6 @@ class BounceAnimationDriver(private val context: Context, private val viewGroup:
 
     override fun idle() {
         viewGroup.forEachIndexed { index, view ->
-            view.clearAnimation()
             val animation = ObjectAnimator.ofFloat(view, "translationY", if (index % 2 == 0) -(idleFrequency) else idleFrequency, 0f)
             animation.duration = animDurationInMilliSecs
             animation.repeatCount = ObjectAnimator.INFINITE
