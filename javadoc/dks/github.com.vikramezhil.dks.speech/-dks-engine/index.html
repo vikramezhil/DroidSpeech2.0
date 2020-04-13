@@ -1,0 +1,319 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DksEngine - dks</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">dks</a>&nbsp;/&nbsp;<a href="../index.html">github.com.vikramezhil.dks.speech</a>&nbsp;/&nbsp;<a href="./index.html">DksEngine</a><br/>
+<br/>
+<h1>DksEngine</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">DksEngine</span></code>
+<p>Droid Kotlin Speech Engine abstract</p>
+<p><strong>Author</strong><br/>
+vikramezhil</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
+</td>
+<td>
+<p>Droid Kotlin Speech Engine abstract</p>
+<code><span class="identifier">DksEngine</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="audio-beep-disabled-timeout.html">audioBeepDisabledTimeout</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">audioBeepDisabledTimeout</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="audio-manager.html">audioManager</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">var </span><span class="identifier">audioManager</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/media/AudioManager.html"><span class="identifier">AudioManager</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="closed-by-user.html">closedByUser</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">var </span><span class="identifier">closedByUser</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="continuous-speech-recognition.html">continuousSpeechRecognition</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">var </span><span class="identifier">continuousSpeechRecognition</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="current-speech-language.html">currentSpeechLanguage</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">var </span><span class="identifier">currentSpeechLanguage</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="eject-progress-view.html">ejectProgressView</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">var </span><span class="identifier">ejectProgressView</span><span class="symbol">: </span><span class="identifier">MutableLiveData</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="error-timeout.html">errorTimeout</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">errorTimeout</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="final-speech-result-found.html">finalSpeechResultFound</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">var </span><span class="identifier">finalSpeechResultFound</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="injected-progress-view.html">injectedProgressView</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">var </span><span class="identifier">injectedProgressView</span><span class="symbol">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html"><span class="identifier">Runnable</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="language-details-intent.html">languageDetailsIntent</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">var </span><span class="identifier">languageDetailsIntent</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/content/Intent.html"><span class="identifier">Intent</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="listening-time.html">listeningTime</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">var </span><span class="identifier">listeningTime</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="max-pause-time.html">maxPauseTime</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">maxPauseTime</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="max-voice-results.html">maxVoiceResults</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">maxVoiceResults</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="one-step-result-verify.html">oneStepResultVerify</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">var </span><span class="identifier">oneStepResultVerify</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="on-ready-for-speech.html">onReadyForSpeech</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">var </span><span class="identifier">onReadyForSpeech</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="partial-delay-time.html">partialDelayTime</a></h4>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">partialDelayTime</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="partial-restart-active.html">partialRestartActive</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">var </span><span class="identifier">partialRestartActive</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="partial-result-speech-handler.html">partialResultSpeechHandler</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">var </span><span class="identifier">partialResultSpeechHandler</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/os/Handler.html"><span class="identifier">Handler</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="pause-and-speak-time.html">pauseAndSpeakTime</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">var </span><span class="identifier">pauseAndSpeakTime</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="progress-view-inactive.html">progressViewInactive</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">var </span><span class="identifier">progressViewInactive</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="reset-action-buttons.html">resetActionButtons</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">var </span><span class="identifier">resetActionButtons</span><span class="symbol">: </span><span class="identifier">MutableLiveData</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="restart-speech-handler.html">restartSpeechHandler</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">var </span><span class="identifier">restartSpeechHandler</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/os/Handler.html"><span class="identifier">Handler</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="show-progress-view.html">showProgressView</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">var </span><span class="identifier">showProgressView</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="speech-frequency.html">speechFrequency</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">var </span><span class="identifier">speechFrequency</span><span class="symbol">: </span><span class="identifier">MutableLiveData</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html"><span class="identifier">Float</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="speech-intent.html">speechIntent</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">var </span><span class="identifier">speechIntent</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/content/Intent.html"><span class="identifier">Intent</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="speech-one-step-verify.html">speechOneStepVerify</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">var </span><span class="identifier">speechOneStepVerify</span><span class="symbol">: </span><span class="identifier">MutableLiveData</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="speech-recognizer.html">speechRecognizer</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">var </span><span class="identifier">speechRecognizer</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/speech/SpeechRecognizer.html"><span class="identifier">SpeechRecognizer</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="speech-result.html">speechResult</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">var </span><span class="identifier">speechResult</span><span class="symbol">: </span><span class="identifier">MutableLiveData</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="supported-speech-languages.html">supportedSpeechLanguages</a></h4>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">var </span><span class="identifier">supportedSpeechLanguages</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-array-list/index.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">?</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="cancel-speech-operations.html">cancelSpeechOperations</a></h4>
+</td>
+<td>
+<p>Cancels the speech operations</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">cancelSpeechOperations</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="close-speech-operations.html">closeSpeechOperations</a></h4>
+</td>
+<td>
+<p>Closes the speech operations</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">closeSpeechOperations</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="eject-progress-view.html">ejectProgressView</a></h4>
+</td>
+<td>
+<p>Ejects the progress view</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">ejectProgressView</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="inject-progress-view.html">injectProgressView</a></h4>
+</td>
+<td>
+<p>Injects the progress view</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">injectProgressView</span><span class="symbol">(</span><span class="identifier" id="github.com.vikramezhil.dks.speech.DksEngine$injectProgressView(kotlin.Int)/progressViewLayout">progressViewLayout</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="mute.html">mute</a></h4>
+</td>
+<td>
+<p>Mutes the audio</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">mute</span><span class="symbol">(</span><span class="identifier" id="github.com.vikramezhil.dks.speech.DksEngine$mute(kotlin.Boolean)/mute">mute</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="restart-speech-recognition.html">restartSpeechRecognition</a></h4>
+</td>
+<td>
+<p>Restarts the speech recognition</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">restartSpeechRecognition</span><span class="symbol">(</span><span class="identifier" id="github.com.vikramezhil.dks.speech.DksEngine$restartSpeechRecognition(kotlin.Boolean)/partialRestart">partialRestart</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="start-speech-recognition.html">startSpeechRecognition</a></h4>
+</td>
+<td>
+<p>Starts the speech recognition</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">startSpeechRecognition</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="trigger-progress-view.html">triggerProgressView</a></h4>
+</td>
+<td>
+<p>Triggers the progress view</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">triggerProgressView</span><span class="symbol">(</span><span class="identifier" id="github.com.vikramezhil.dks.speech.DksEngine$triggerProgressView(kotlin.Int)/progressViewLayout">progressViewLayout</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="../-dks/index.html">Dks</a></h4>
+</td>
+<td>
+<p>Droid Kotlin Speech</p>
+<code><span class="keyword">class </span><span class="identifier">Dks</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">DksEngine</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

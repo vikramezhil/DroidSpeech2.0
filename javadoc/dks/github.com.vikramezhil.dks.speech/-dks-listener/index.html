@@ -1,0 +1,58 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>DksListener - dks</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">dks</a>&nbsp;/&nbsp;<a href="../index.html">github.com.vikramezhil.dks.speech</a>&nbsp;/&nbsp;<a href="./index.html">DksListener</a><br/>
+<br/>
+<h1>DksListener</h1>
+<code><span class="keyword">interface </span><span class="identifier">DksListener</span></code>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<h4><a href="on-dks-final-speech-result.html">onDksFinalSpeechResult</a></h4>
+</td>
+<td>
+<p>Sends an update on the final speech result</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">onDksFinalSpeechResult</span><span class="symbol">(</span><span class="identifier" id="github.com.vikramezhil.dks.speech.DksListener$onDksFinalSpeechResult(kotlin.String)/speechResult">speechResult</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="on-dks-languages-available.html">onDksLanguagesAvailable</a></h4>
+</td>
+<td>
+<p>Sends an update when the languages are available</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">onDksLanguagesAvailable</span><span class="symbol">(</span><span class="identifier" id="github.com.vikramezhil.dks.speech.DksListener$onDksLanguagesAvailable(kotlin.String, java.util.ArrayList((kotlin.String)))/defaultLanguage">defaultLanguage</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="github.com.vikramezhil.dks.speech.DksListener$onDksLanguagesAvailable(kotlin.String, java.util.ArrayList((kotlin.String)))/supportedLanguages">supportedLanguages</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-array-list/index.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="on-dks-live-speech-frequency.html">onDksLiveSpeechFrequency</a></h4>
+</td>
+<td>
+<p>Sends an update on the speech frequency</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">onDksLiveSpeechFrequency</span><span class="symbol">(</span><span class="identifier" id="github.com.vikramezhil.dks.speech.DksListener$onDksLiveSpeechFrequency(kotlin.Float)/frequency">frequency</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html"><span class="identifier">Float</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="on-dks-live-speech-result.html">onDksLiveSpeechResult</a></h4>
+</td>
+<td>
+<p>Sends an update on the live speech result</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">onDksLiveSpeechResult</span><span class="symbol">(</span><span class="identifier" id="github.com.vikramezhil.dks.speech.DksListener$onDksLiveSpeechResult(kotlin.String)/liveSpeechResult">liveSpeechResult</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="on-dks-speech-error.html">onDksSpeechError</a></h4>
+</td>
+<td>
+<p>Sends an update if there is an error</p>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">onDksSpeechError</span><span class="symbol">(</span><span class="identifier" id="github.com.vikramezhil.dks.speech.DksListener$onDksSpeechError(kotlin.String)/errMsg">errMsg</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>
