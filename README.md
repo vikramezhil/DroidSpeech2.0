@@ -35,9 +35,11 @@ Add this to your app build.gradle:
 
 ```java
 dependencies {
-    implementation 'com.github.vikramezhil:DroidSpeech2.0:v1.2' 
+    implementation 'com.github.vikramezhil:DroidSpeech2.0:vx.y' 
 }
 ```
+
+change vx.y to version number in the [release page](https://github.com/vikramezhil/DroidSpeech2.0/releases)
 
 <b>Maven:</b>
 
@@ -58,9 +60,11 @@ Add the following to the <dependencies> section of your pom.xml:
 <dependency>
     <groupId>com.github.vikramezhil</groupId>
     <artifactId>DroidSpeech2.0</artifactId>
-    <version>v1.2</version>
+    <version>vx.y</version>
 </dependency>
 ```
+
+change vx.y to version in the [release page](https://github.com/vikramezhil/DroidSpeech2.0/releases)
 
 <b><h1>Documentation</h1></b>
 
