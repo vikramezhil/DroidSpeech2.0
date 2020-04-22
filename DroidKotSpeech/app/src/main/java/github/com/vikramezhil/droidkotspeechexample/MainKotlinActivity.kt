@@ -13,7 +13,7 @@ import kotlinx.android.synthetic.main.activity_main.*
  * @author vikramezhil
  */
 
-class MainActivity : AppCompatActivity() {
+class MainKotlinActivity : AppCompatActivity() {
 
     private lateinit var dks: Dks
 
@@ -48,8 +48,8 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
-        dks.oneStepResultVerify = true
         dks.injectProgressView(R.layout.layout_pv_inject)
+        dks.oneStepResultVerify = true
 
         btn_start_dks.setOnClickListener {
             dks.startSpeechRecognition()
