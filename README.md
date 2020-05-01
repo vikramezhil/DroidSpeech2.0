@@ -39,7 +39,7 @@ dependencies {
 }
 ```
 
-change vx.y to version number in the [release page](https://github.com/vikramezhil/DroidSpeech2.0/releases)
+change x.y to version number in the [release page](https://github.com/vikramezhil/DroidSpeech2.0/releases)
 
 <b>Maven:</b>
 
@@ -64,7 +64,7 @@ Add the following to the <dependencies> section of your pom.xml:
 </dependency>
 ```
 
-change vx.y to version in the [release page](https://github.com/vikramezhil/DroidSpeech2.0/releases)
+change x.y to version in the [release page](https://github.com/vikramezhil/DroidSpeech2.0/releases)
 
 <b><h1>Documentation</h1></b>
 
